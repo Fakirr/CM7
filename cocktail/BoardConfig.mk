@@ -1,6 +1,3 @@
-#TARGET_NO_BOOTLOADER := true
-#TARGET_NO_RADIOIMAGE := true
-
 TARGET_BOOTLOADER_BOARD_NAME := cocktail
 
 TARGET_BOARD_PLATFORM := msm7x30
@@ -39,13 +36,9 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_NO_FLASH := true
 
 TARGET_PREBUILT_KERNEL := device/alcatel/cocktail/prebuilt/kernel
-#TARGET_RECOVERY_INITRC := device/alcatel/cocktail/init.recovery.rc
 
 # QCOM Display
-#BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 BOARD_EGL_CFG := device/alcatel/cocktail/egl.cfg
-#BOARD_USES_ADRENO_200 := true
-#TARGET_GRALLOC_USES_ASHMEM := true
 HDMI_DUAL_DISPLAY := true
 TARGET_QCOM_HDMI_OUT := true
 TARGET_NO_HW_VSYNC := true
@@ -67,7 +60,6 @@ TARGET_FORCE_CPU_UPLOAD := true
 # QCOM
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true
-#BOARD_USE_QCOM_PMEM := true
 BOARD_USES_QCOM_GPS := true
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBRPC := true
@@ -75,12 +67,11 @@ BOARD_USES_QCOM_LIBS := true
 BOARD_VENDOR_QCOM_AMSS_VERSION := 6225
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := cocktail
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
+
+#Temp unused PMEM config
 #TARGET_USES_PMEM := true
-
+#BOARD_USE_QCOM_PMEM := true
 #BOARD_NEEDS_MEMORYHEAPPMEM := true
-
-# radio interface
-#BOARD_MOBILEDATA_INTERFACE_NAME = "rmnet0"
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
@@ -91,21 +82,6 @@ WIFI_DRIVER_FW_STA_PATH     := "/system/etc/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_AP_PATH      := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/firmware/b2.bin nvram_path=/proc/calibration"
 WIFI_DRIVER_MODULE_NAME     := "bcm4330"
-
-#WPA_SUPPLICANT_VERSION      := VER_0_8_X
-#BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-#BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-#BOARD_HOSTAPD_DRIVER        := NL80211
-#BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_bcmdhd
-#BOARD_WLAN_DEVICE           := bcmdhd
-#BOARD_WLAN_DEVICE_REV       := bcm4330_b2
-#WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcm4330/parameters/firmware_path"
-#WIFI_DRIVER_MODULE_NAME     := "bcm4330"
-#WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcm4330.ko"
-#WIFI_DRIVER_MODULE_ARG      := "nvram_path=/system/etc/firmware/nvram.txt"
-#WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcmdhd.bin"
-#WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
-#WIFI_DRIVER_FW_PATH_P2P     := "/system/etc/firmware/fw_bcmdhd_p2p.bin"
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
